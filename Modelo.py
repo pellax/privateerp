@@ -132,6 +132,22 @@ class Pasivo:
         self.deudasbanco = deudasbanco
         self.inmovilizadolargoplazo = inmovilizadoolargoplazo
         self.deudasbancolargoplazo = deudasbancolargoplazo
+class PatrimonionetoBuilder:
+    def __init__(self,importe,capitalpropietarios,reservas)
+        self._importe = capitalpropietarios + reservas
+        self._capitalpropietarios = capitalpropietarios
+        self._reservas = reservas
+    def set_importe(self,importe):
+        self._importe = importe
+        return self
+    def set_capitalpropietaios(self,capitalpropietarios):
+        self._capitalpropietarios = capitalpropietarios
+        return self
+    def set_reservas(self,reservas):
+        self._reservas = reservas
+        return self
+    def builder(self):
+        return Patrimonioneto
 class Patrimonioneto:
     def __init__(self,activo,pasivo):
         self.importe=activo-pasivo
